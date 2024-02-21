@@ -65,17 +65,21 @@
     <!-- nav section end -->
    </section>
    <!-- banner section start -->
-   <section >
+   <section id="home-screen">
     <div class="w-[80%] mx-auto bg-[url('images/banner.png')] min-h-[550px] bg-contain bg-no-repeat">
       <div class="flex flex-col justify-center items-center gap-8 py-20">
         <h2 class="text-white text-6xl font-semibold">End-to-End Travel with </h2>
         <h2 class="text-[#1DD100] text-6xl font-semibold">Dhaka Paribahan</h2>
       <p class="text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined . </p>
-      <button class="btn text-black bg-[#1DD100]">Buy Tickets</button>
+      <button onclick="buyTicket()" class="btn text-black bg-[#1DD100]">Buy Tickets</button>
       </div>
       
     </div>
+  </section>
+  
+
      <!-- best offer  -->
+   <section id="best-offer">
     <div class="flex flex-col justify-center items-center mb-6" >
       <h4 class="text-4xl font-bold">Best offers for you</h4>
       <div class=" w-[80%] flex justify-around items-center my-9">
@@ -108,15 +112,16 @@
           </div>
         </div>
       </div>
-      <button class="btn text-[#1DD100]">See All Offers</button>
+      <button class="btn text-[#1DD100] border-1 border-[#1DD100]">See All Offers</button>
     </div>
+   </section>
     
    </section>
    <!-- banner section end -->
 
    <!-- paribahan section start -->
-
-   <section>
+<section id="transport" class="hidden">
+  <div>
     <div class="flex w-[80%] mx-auto">
       <div class="flex flex-col justify-center items-center gap-4 w-[70%]">
      
@@ -179,11 +184,11 @@
     </div>
     </div>
 
-   </section>
+  
    
    <!-- paribahan section end -->
    <!-- seat section start -->
-   <section>
+  
     <div class=" w-[80%] mx-auto  flex mt-6 gap-36">
       <!-- left side  -->
       <div class=" w-[50%] space-y-5">
@@ -219,46 +224,46 @@
           <div class="grid grid-cols-4  gap-10 ">
            
             <!-- P{A$}*4  -->
-            <P class="bg-gray-300 py-2 px-5 rounded-md">A1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">A2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">A3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">A4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">B1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">B2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">B3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">B4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">C1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">C2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">C3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">C4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">D1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">D2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">D3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">D4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">E1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">E2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">E3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">E4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">F1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">F2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">F3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">F4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">G1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">G2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">G3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">G4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">H1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">H2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">H3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">H4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">I1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">I2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">I3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">I4</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">J1</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">J2</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">J3</P>
-            <P class="bg-gray-300 py-2 px-5 rounded-md">J4</P>
+            <P id="A1" class="bg-gray-300 py-2 px-5 rounded-md">A1</P>
+            <P id="A2" class="bg-gray-300 py-2 px-5 rounded-md">A2</P>
+            <P id="A3" class="bg-gray-300 py-2 px-5 rounded-md">A3</P>
+            <P id="A4" class="bg-gray-300 py-2 px-5 rounded-md">A4</P>
+            <P id="B1" class="bg-gray-300 py-2 px-5 rounded-md">B1</P>
+            <P id="B2" class="bg-gray-300 py-2 px-5 rounded-md">B2</P>
+            <P id="B3" class="bg-gray-300 py-2 px-5 rounded-md">B3</P>
+            <P id="B4" class="bg-gray-300 py-2 px-5 rounded-md">B4</P>
+            <P id="C1" class="bg-gray-300 py-2 px-5 rounded-md">C1</P>
+            <P id="C2" class="bg-gray-300 py-2 px-5 rounded-md">C2</P>
+            <P id="C3" class="bg-gray-300 py-2 px-5 rounded-md">C3</P>
+            <P id="C4" class="bg-gray-300 py-2 px-5 rounded-md">C4</P>
+            <P id="D1" class="bg-gray-300 py-2 px-5 rounded-md">D1</P>
+            <P id="D2" class="bg-gray-300 py-2 px-5 rounded-md">D2</P>
+            <P id="D3" class="bg-gray-300 py-2 px-5 rounded-md">D3</P>
+            <P id="D4" class="bg-gray-300 py-2 px-5 rounded-md">D4</P>
+            <P id="E1" class="bg-gray-300 py-2 px-5 rounded-md">E1</P>
+            <P id="E2" class="bg-gray-300 py-2 px-5 rounded-md">E2</P>
+            <P id="E3" class="bg-gray-300 py-2 px-5 rounded-md">E3</P>
+            <P id="E4" class="bg-gray-300 py-2 px-5 rounded-md">E4</P>
+            <P id="F1" class="bg-gray-300 py-2 px-5 rounded-md">F1</P>
+            <P id="F2" class="bg-gray-300 py-2 px-5 rounded-md">F2</P>
+            <P id="F3" class="bg-gray-300 py-2 px-5 rounded-md">F3</P>
+            <P id="F4" class="bg-gray-300 py-2 px-5 rounded-md">F4</P>
+            <P id="G1" class="bg-gray-300 py-2 px-5 rounded-md">G1</P>
+            <P id="G2" class="bg-gray-300 py-2 px-5 rounded-md">G2</P>
+            <P id="G3" class="bg-gray-300 py-2 px-5 rounded-md">G3</P>
+            <P id="G4" class="bg-gray-300 py-2 px-5 rounded-md">G4</P>
+            <P id="H1" class="bg-gray-300 py-2 px-5 rounded-md">H1</P>
+            <P id="H2" class="bg-gray-300 py-2 px-5 rounded-md">H2</P>
+            <P id="H3" class="bg-gray-300 py-2 px-5 rounded-md">H3</P>
+            <P id="H4" class="bg-gray-300 py-2 px-5 rounded-md">H4</P>
+            <P id="I1" class="bg-gray-300 py-2 px-5 rounded-md">I1</P>
+            <P id="I2" class="bg-gray-300 py-2 px-5 rounded-md">I2</P>
+            <P id="I3" class="bg-gray-300 py-2 px-5 rounded-md">I3</P>
+            <P id="I4" class="bg-gray-300 py-2 px-5 rounded-md">I4</P>
+            <P id="J1" class="bg-gray-300 py-2 px-5 rounded-md">J1</P>
+            <P id="J2" class="bg-gray-300 py-2 px-5 rounded-md">J2</P>
+            <P id="J3" class="bg-gray-300 py-2 px-5 rounded-md">J3</P>
+            <P id="J4" class="bg-gray-300 py-2 px-5 rounded-md">J4</P>
            
            
             
@@ -295,8 +300,8 @@
               <h6>Total price</h6>
               <h6>BDT 1100</h6>
             </div>
-           <div class="mb-4 bg-white px-3 rounded-md">
-            <input type="text" placeholder="have any copupon?">
+           <div class="mb-4 bg-white px-3 rounded-md disabled">
+            <input type="text" placeholder="have any copupon? disabled:opacity-75">
             <button class="btn text-white bg-[#1DD100]">Apply</button>
            </div>
             <div class="flex justify-between mb-4">
@@ -340,13 +345,11 @@
 
       </div>
     </div>
-   </section>
-   <!-- seat section end -->
-   <!-- footer section  -->
-   <section>
-   
-   </section>
+  </div>
+</section>
+
 
     <script src="scripts/tailwind.config.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
