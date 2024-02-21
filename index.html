@@ -4,8 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- daisyUi  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>hello</h1>
+   <section class="w-[80%] mx-auto my-8">
+     <!-- nav section  -->
+     <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+            
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">E-Ticket</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          
+      </div>
+      <div class="navbar-end">
+        <a class="btn bg-[#1DD1003D]">
+          <h4 class="text-[#1DD100]">Bus</h4>
+          <img src="images/bus-icon.png" alt="">
+        </a>
+      </div>
+    </div>
+    <!-- nav section end -->
+   </section>
+   <!-- banner section start -->
+   <section >
+    <div class="w-[80%] mx-auto bg-[url('images/banner.png')] min-h-[550px] bg-contain bg-no-repeat">
+      <div class="flex flex-col justify-center items-center gap-8 py-20">
+        <h2 class="text-white text-6xl font-semibold">End-to-End Travel with </h2>
+        <h2 class="text-[#1DD100] text-6xl font-semibold">Dhaka Paribahan</h2>
+      <p class="text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined . </p>
+      <button class="btn text-black bg-[#1DD100]">Buy Tickets</button>
+      </div>
+      
+    </div>
+    <div class="flex flex-col justify-center items-center" >
+      <h4>Best offers for you</h4>
+      <button class="btn text-[#1DD100]">Buy Tickets</button>
+    </div>
+    
+   </section>
+   <!-- banner section end -->
+
+   <!-- paribahan section start -->
+
+   <section>
+    <div class="w-[80%] mx-auto my-8">
+      <h4>P.H Paribahan</h4>
+      <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+
+
+    </div>
+
+   </section>
+   
+   <!-- paribahan section end -->
+
+    <script src="scripts/tailwind.config.js"></script>
   </body>
 </html>
